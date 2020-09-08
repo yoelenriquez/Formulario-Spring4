@@ -37,8 +37,16 @@ public class ClienteDaoImple implements IClienteDao {
 	}
 
 	@Override
+	@Transactional(readOnly = true)
 	public Cliente findOne(Long id) {
 		return em.find(Cliente.class, id);
+	}
+
+	@Override
+	@Transactional
+	public void eliminar(Long id) {
+		Cliente cliente = findOne(id);
+		em.remove(cliente);
 	}
 
 }
