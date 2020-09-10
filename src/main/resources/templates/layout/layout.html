@@ -2,9 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
 <meta charset="UTF-8" />
-<title th:text="'Spring Boot: MVC + Thymeleaf + Data JPA - ' + ${titulo}"></title>
-<link rel="stylesheet"
-	th:href="@{/css/bootstrap.min.css}"
+<title
+	th:text="'Spring Boot: MVC + Thymeleaf + Data JPA - ' + ${titulo}"></title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"
 	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
 	crossorigin="anonymous">
 </head>
@@ -27,26 +27,32 @@
 				</ul>
 			</div>
 		</nav>
+		
+		<div class="alert alert-success" th:if="${success} != null" th:text="${success}"></div>
+		<div class="alert alert-danger" th:if="${error} != null" th:text="${error}"></div>
+		<div class="alert alert-warning" th:if="${warning} != null" th:text="${warning}"></div>
+		<div class="alert alert-info" th:if="${info} != null" th:text="${info}"></div>
+		
 	</header>
 
 	<div class="container"></div>
-	
+
 	<footer th:fragment="footer" class="container">
 		<hr />
-		<img th:src="@{/images/spring.png}" alt="Spring logo"/>
+		<img th:src="@{/images/spring.png}" alt="Spring logo" />
 		<p>
-			Powered By <a href="https://spring.io/projects/spring-boot">Spring Boot</a> y <a href="http://www.thymeleaf.org">Thymeleaf</a>
+			Powered By <a href="https://spring.io/projects/spring-boot">Spring
+				Boot</a> y <a href="http://www.thymeleaf.org">Thymeleaf</a>
 		</p>
 		<p>
-			Este proyecto fue desarrollador en IDE Eclipse + Spring plugin (STS Spring Tool), Enriquez Mauro Yoel<br />
-			&copy; Todos los derechos reservados. Terminos de uso y privacidad. <br />
+			Este proyecto fue desarrollador en IDE Eclipse + Spring plugin (STS
+			Spring Tool), Enriquez Mauro Yoel<br /> &copy; Todos los derechos
+			reservados. Terminos de uso y privacidad. <br />
 		</p>
-		
+
 		<script th:src="@{/js/jquery-3.5.1.min.js}"></script>
-			<script
-				th:src="@{/js/popper.min.js}"></script>
-			<script
-				th:src="@{/js/bootstrap.min.js}"></script>
+		<script th:src="@{/js/popper.min.js}"></script>
+		<script th:src="@{/js/bootstrap.min.js}"></script>
 	</footer>
 </body>
 </html>
