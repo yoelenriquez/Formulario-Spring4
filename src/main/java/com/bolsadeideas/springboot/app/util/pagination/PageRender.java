@@ -3,7 +3,6 @@ package com.bolsadeideas.springboot.app.util.pagination;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hibernate.result.NoMoreReturnsException;
 import org.springframework.data.domain.Page;
 
 public class PageRender<T> {
@@ -34,7 +33,7 @@ public class PageRender<T> {
 			desde = 1;
 			hasta = totalPaginas;
 		} else {
-			if (this.paginaActual >= this.totalPaginas - this.numElementosPorPagina / 2) {
+			if (this.paginaActual <= this.numElementosPorPagina / 2) {
 				desde = 1;
 				hasta = this.numElementosPorPagina;
 			} else if (this.paginaActual >= this.totalPaginas - this.numElementosPorPagina / 2) {
@@ -47,7 +46,7 @@ public class PageRender<T> {
 		}
 
 		for (int i = 0; i < hasta; i++) {
-			paginas.add(new PageItem(desde + i, this.paginaActual == desde + 1));
+			paginas.add(new PageItem(desde + i, this.paginaActual == desde + i));
 		}
 	}
 

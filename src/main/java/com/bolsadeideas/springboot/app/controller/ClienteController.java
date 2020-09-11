@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.bolsadeideas.springboot.app.models.dao.IClienteDao;
 import com.bolsadeideas.springboot.app.models.entity.Cliente;
 import com.bolsadeideas.springboot.app.models.service.IClienteService;
+import com.bolsadeideas.springboot.app.util.pagination.PageRender;
 
 @Controller
 @SessionAttributes("cliente")
@@ -37,8 +37,11 @@ public class ClienteController {
 		
 		Page<Cliente> clientes = clienteService.findAll(pageRequest);
 		
+		PageRender<Cliente> pageRender = new PageRender<>("/listar", clientes); 
+		
 		model.addAttribute("titulo", "Listado de cliente");
 		model.addAttribute("clientes", clientes);
+		model.addAttribute("page", pageRender);
 		
 		return "listar";
 	}
