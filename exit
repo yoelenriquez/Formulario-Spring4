@@ -1,0 +1,21 @@
+* [33m92c2e30[m[33m ([m[1;36mHEAD -> [m[1;32mDESAR[m[33m)[m Creacion de nuevos entitys para sistema de facturacion
+* [33m74d457d[m[33m ([m[1;31morigin/DESAR[m[33m)[m Creacion de ruta uploads en ejecucion
+* [33m9cf4312[m separacion del manejo de archivos mediante un nuevo servicio
+* [33mb338915[m se agrego eliminacion y reemplazo de imagen
+* [33mf2f53e5[m se agrego ruta de directorio externo
+* [33m36759e4[m Agregando imagen y opcion de ver usuario
+*   [33m0560dcb[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m, [m[1;32mlist[m[33m)[m Merge branch 'master' of https://github.com/yoelenriquez/Formulario-Spring4 into master
+[32m|[m[33m\[m  
+[32m|[m *   [33m0751f8b[m Merge pull request #1 from yoelenriquez/DESAR
+[32m|[m [34m|[m[35m\[m  
+* [34m|[m [35m|[m [33m5771600[m Ìmplementacion de paginacion en la vista
+* [34m|[m [35m|[m [33m935b7d0[m Implementacion de clase y en controlador de paginacion generica para las vistas
+[35m|[m [34m|[m[35m/[m  
+[35m|[m[35m/[m[34m|[m   
+* [34m|[m [33mf0af329[m Agregando flash messagers en alerts a las vistas
+* [34m|[m [33m692554b[m Se agrego layouts junto con Bootstrap y js ademas de carts en las vistas
+* [34m|[m [33mde6ab93[m Implementacion de BD MySQL
+* [34m|[m [33m332c8da[m Implementacion de la capa de servicio para cliente
+* [34m|[m [33m704a724[m Se agrego la funcion eliminar usuario
+[34m|[m[34m/[m  
+* [33m3d3cbc5[m Creacion del proyecto

@@ -1,6 +1,3 @@
-uploads/
-uploads/*.png
-/uploads
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -34,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+uploads/
+uploads/*.png
+/uploads/
