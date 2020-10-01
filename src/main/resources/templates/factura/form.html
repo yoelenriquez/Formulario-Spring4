@@ -5,9 +5,14 @@
 	<header th:replace="layout/layout :: header"></header>
 
 	<div class="container py-4">
-		<div class="card bg-dark text-white">
+		<div class="card bg-light">
 			<div class="card-header" th:text="${titulo}"></div>
 			<div class="card-body">
+
+				<h4 class="card-title">
+					<a class="btn btn-success btn-xs"
+						th:href="@{/ver/} + ${factura.cliente.id}">&laquo; volver</a>
+				</h4>
 
 				<form th:action="@{/factura/form/}" th:object="${factura}"
 					method="post">
